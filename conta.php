@@ -8,9 +8,13 @@ class conta
   public static $contador=0; //atributo da classe
 
 
-  function __construct()
+  private function __construct() // metodo privado 
   {
    self::$contador++;
+  }
+
+  static function criaconta(){// metodo da classe e não do objeto uso do static
+    return new conta();
   }
 }
 
